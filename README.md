@@ -3,7 +3,7 @@ Hello, I am Nitin, and I am currently documenting a project on Perception-Based 
 
 ### **Steps to Follow for executions:**
 * Install Moveit on your system from this link : [Moveit](https://ros-planning.github.io/moveit_tutorials/doc/getting_started/getting_started.html)
-   * You can try checking if Moveit install correctly by running this command in terminal :
+   * You can try checking if Moveit install correctly by running this command in terminal, after sourcing the workspace:
      `roslaunch panda_moveit_config demo_gazebo.launch` this should open rviz with moveit configuration for           panda emika robotic arm:
 * Fork this Repo: `https://github.com/thakkarnitin63/Perception-based-robotic-arm-grasping.git`
 * In Repo, I have got Intel Realsense Plugin get that folder outside this folder(Perception-based-robotic-arm-grasping):`realsense_ws`
