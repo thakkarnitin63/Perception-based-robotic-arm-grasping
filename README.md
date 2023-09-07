@@ -4,5 +4,8 @@ Hello, I am Nitin, and I am currently documenting a project on Perception-Based 
 ### **Steps to Follow for executions:**
 * Install Moveit on your system from this link : [Moveit](https://ros-planning.github.io/moveit_tutorials/doc/getting_started/getting_started.html)
 * Fork this Repo: `https://github.com/thakkarnitin63/Perception-based-robotic-arm-grasping.git`
+* In Repo, I have got Intel Realsense Plugin get that folder outside this folder:`realsense_ws`
+  * open terminal follow this command `cd realsense_ws` then `catkin make` this will build the catkin package       and your intel realsense plugin will start working to simulate the depth camera in gazebo since we are not      using real hardware
+    
 
 **Author-Nitin Thakkar**
