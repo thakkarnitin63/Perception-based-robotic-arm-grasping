@@ -7,8 +7,8 @@ Hello, I am Nitin, and I am currently documenting a project on Perception-Based 
      `roslaunch panda_moveit_config demo_gazebo.launch` this should open rviz and gazebo with moveit configuration for           panda emika robotic arm:
      This should open the Gazebo with robotic arm but without rgbd camera and rviz with moveit configuration:
      
-     <img src="Images/GazeboPandaEmika.png" alt="Gazebo Moveit Config" width="300">
-     <img src="Images/RvizPandaEmika.png" alt="Gazebo Moveit Config" width="300">
+     <img src="Images/GazeboPandaEmika.png" alt="Gazebo Moveit Config" width="500">
+     <img src="Images/RvizPandaEmika.png" alt="Gazebo Moveit Config" width="500">
      
 * Fork this Repo: `https://github.com/thakkarnitin63/Perception-based-robotic-arm-grasping.git`
 * In Repo, I have got Intel Realsense Plugin get that folder outside this folder(Perception-based-robotic-arm-grasping):`realsense_ws`
