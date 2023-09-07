@@ -1,0 +1,2 @@
+realsense2_description:realsense_gazebo_plugin
+-DCATKIN_DEVEL_PREFIX=/home/nitin/realsense_ws/devel -DCMAKE_INSTALL_PREFIX=/home/nitin/realsense_ws/install -G Unix Makefiles
