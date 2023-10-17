@@ -15,8 +15,7 @@ Hello, I am Nitin, and I am currently documenting a project on Perception-Based 
   * Open terminal follow this command `cd realsense_ws` then `catkin make` this will build the catkin package       and your intel realsense plugin will start working to simulate the depth camera in gazebo since we are not      using real hardware
   * Now, `cd rgbd_ws` and do catkin make using `catkin make` after that you will have working workspace for realsense and rgbd workspace.
   * Installation for Franka ros robotic arm files `sudo apt install ros-noetic-libfranka ros-noetic-franka-ros` run this command to get install franka ros files so we can later on change this files to attch camera module to robotic arm.
-  * Locate `franka_description` in your `computer/opt/ros/noetic/share/` go to `franka_description/robots/panda/` and perform this changes to given file by the name `panda.urdf.xacro`.
-  
+  * Locate `franka_description` in your `computer/opt/ros/noetic/share/` go to `franka_description/robots/panda/` and perform this changes to given file by the name `panda.urdf.xacro`. This change will enable to add camera to your Gazebo file for Franka arm.
   ```<?xml version='1.0' encoding='utf-8'?>
   <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="panda">
 
@@ -28,12 +27,15 @@ Hello, I am Nitin, and I am currently documenting a project on Perception-Based 
                       joint_limits="${xacro.load_yaml('$(find franka_description)/robots/panda/joint_limits.yaml')}">
   </xacro:franka_robot>
 
-  <xacro:include filename="/home/nitin/realsense_ws/src/realsense2_description/urdf/_d435.urdf.xacro"/> 
+  <xacro:include filename="/your address where you clone this/realsense_ws/src/realsense2_description/urdf/_d435.urdf.xacro"/> 
   <xacro:sensor_d435 name="camera" topics_ns="camera" parent="panda_link0" publish_pointcloud="true">
   <origin xyz="0.65 -0.05 0.75" rpy="0  1.5708 0.0"/>
   </xacro:sensor_d435>
 
   </robot>```
+
+After performing these step when you launch your panda config file you can see the camera on the given distance to robotic arm and ready to provide feed with gazebo plugin of intel realsense.
+
     
 
 **Author-Nitin Thakkar**
