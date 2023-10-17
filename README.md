@@ -34,7 +34,12 @@ Hello, I am Nitin, and I am currently documenting a project on Perception-Based 
 
   </robot>```
 
-After performing these step when you launch your panda config file you can see the camera on the given distance to robotic arm and ready to provide feed with gazebo plugin of intel realsense.
+After performing these step when you launch your panda config file you can see the camera on the given distance to robotic arm and ready to provide feed with gazebo plugin of intel realsense `roslaunch panda_moveit_config demo_gazebo.launch` in the file I am also attaching the urdf model of cad designed bottle which can be used for grasping you can simply put in `gazebo/models` and your model will be ready to import in gazebo.
+
+**Steps to perform grasping**
+* All the prerequisites are completed. Launch the gazebo model `roslaunch panda_moveit_config demo_gazebo.launch` then go to rviz and you can add the camera feed in rviz by clicking on `Add` and move to `By topic` select `/camera/color/image_raw` to see the feed of camera. 
+* Import the bottle in gazebo within camera vision by clicking `Insert` and getting the `BottleModel`. This will enale to add bottle to world.
+* Lastly run this command after sourcing the bash `rosrun rgbd_ws rgbd_process.py` and in another terminal `rosrun rgbd_ws PicknPlace` This will run the program to pick the bottle with perception knowledge of robotic arm.  
 
     
 
