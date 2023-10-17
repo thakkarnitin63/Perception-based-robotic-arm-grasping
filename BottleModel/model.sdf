@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+    <model name="BottleModel">
+        <!-- <static>true</static> -->
+        <!-- Inertial properties -->
+        <inertial>
+            <mass>0.390</mass>  <!-- Adjust the mass value -->
+            <pose>0 0 0 0 0 0</pose>
+            <inertia>
+                <ixx>0.</ixx>
+                <ixy>0</ixy>
+                <ixz>0</ixz>
+                <iyy>0</iyy>
+                <iyz>0</iyz>
+                <izz>0</izz>
+            </inertia>
+        </inertial>
+
+        <link name="link">
+            <collision name="collision">
+                <geometry>
+                    <mesh>
+                        <scale>1 1 1</scale>
+                        <uri>model://BottleModel/meshes/BottleModel.stl</uri>
+                    </mesh>
+                </geometry>
+                <surface>
+                    <contact>
+                        <ode>
+                            <collide_bitmask>1</collide_bitmask>
+                        </ode>
+                    </contact>
+                </surface>
+            </collision>
+            
+            <visual name="visual">
+                <geometry>
+                    <mesh>
+                        <scale>1 1 1</scale>
+                        <uri>model://BottleModel/meshes/BottleModel.dae</uri>
+                    </mesh>
+                </geometry>
+            </visual>
+        </link>
+    </model>
+</sdf>
